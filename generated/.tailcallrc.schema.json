@@ -588,6 +588,32 @@
           "additionalProperties": false
         },
         {
+          "description": "Retrieves the value at a given path. The nodes of the path can be arbitrary strings or non-negative integers. For anything else, the value is unspecified. Integer paths are meant to index arrays, strings are meant for objects.",
+          "type": "object",
+          "required": [
+            "path"
+          ],
+          "properties": {
+            "path": {
+              "type": "array",
+              "items": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                ]
+              },
+              "maxItems": 3,
+              "minItems": 1
+            }
+          },
+          "additionalProperties": false
+        },        
+        {
           "type": "object",
           "required": [
             "propEq"

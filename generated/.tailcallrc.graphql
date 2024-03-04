@@ -451,6 +451,7 @@ input ExprBody {
   product: [ExprBody]
   subtract: [ExprBody]
   sum: [ExprBody]
+  path: [ExprBody]
 }
 input ExprIf {
   """
